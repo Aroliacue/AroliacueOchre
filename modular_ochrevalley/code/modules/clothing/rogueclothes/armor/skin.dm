@@ -29,35 +29,42 @@
 	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER
 
 
-//baseline wildsoul skin - 125% of a heavy gambeson + a leather armor over the chest.
+//baseline wildsoul skin - 150% of a leather armor, with a backup gambeson on chest.
 /obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/fullbody/wildsoul
 	name = "natural armour"
 	desc = "The natural body of this person protects them from some amount of harm."
 	armor_class = ARMOR_CLASS_NONE
-	armor = ARMOR_PADDED
-	max_integrity = ARMOR_INT_CHEST_LIGHT_ELITE //1.25x more than a heavy gambeson, because you dont get limb layering.
+	armor = ARMOR_LEATHER
+	max_integrity = ARMOR_INT_CHEST_LIGHT_ANTAG //1.5x hardened leather armor.
 
 /obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/chestskin/wildsoul
 	name = "natural chest armour"
 	desc = "The natural body of this person protects them from some amount of harm."
 	armor_class = ARMOR_CLASS_NONE
-	armor = ARMOR_LEATHER
-	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER //hardened leather armor, simple.
+	armor = ARMOR_PADDED
+	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER //a chest-only heavy gambeson.
 
-//heavy wildsoul skin - a fullbody medium brigandine + a steel cuirass on the chest, very good but wont get limb layering.
+
+//heavy wildsoul skin - 150% of a steel cuirass, with a backup light brig on chest.
 /obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/fullbody/wildsoul/heavy
 	name = "dense natural armour"
-	armor = ARMOR_BRIGANDINE
-	max_integrity = ARMOR_INT_CHEST_PLATE_BRIGANDINE //a full medium brigandine.
+	armor = ARMOR_PLATE
+	max_integrity = ARMOR_INT_CHEST_LIGHT_ANTAG //1.5x hardened leather armor integ, but plate.
 
 /obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/chestskin/wildsoul/heavy
 	name = "dense natural chest armour"
-	armor = ARMOR_PLATE
-	max_integrity = ARMOR_INT_CHEST_MEDIUM_STEEL //A steel cuirass.
+	armor = ARMOR_BRIGANDINE
+	max_integrity = ARMOR_INT_CHEST_PLATE_BRIGANDINE - ARMOR_INT_CHEST_PLATE_BRIGANDINE_WEIGHT_MODIFIER //Light brig
 
-//Warden wildsoul skin - a heavy gambeson (but leather type) + a steel cuirass on the chest. Can use bracers, headbands and the like.
+
+//Warden wildsoul skin - a heavy gambeson + light brigadine, simple since they get layering.
+/obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/fullbody/wildsoul/heavy
+	name = "dense natural armour"
+	armor = ARMOR_PADDED
+	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER //A heavy gambeson for the body.
+
 /obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/fullbody/wildsoul/heavy/tame
 	name = "warden's natural armour"
-	armor = ARMOR_LEATHER
-	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER //A heavy gambeson, but leather type.
+	armor = ARMOR_BRIGANDINE
+	max_integrity = ARMOR_INT_CHEST_PLATE_BRIGANDINE - ARMOR_INT_CHEST_PLATE_BRIGANDINE_WEIGHT_MODIFIER //Light brig.
 
