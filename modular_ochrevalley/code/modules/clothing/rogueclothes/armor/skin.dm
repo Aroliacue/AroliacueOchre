@@ -1,0 +1,63 @@
+/obj/item/clothing/suit/roguetown/armor/manual/resting/ochre
+	resistance_flags = FIRE_PROOF
+	unenchantable = TRUE
+	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
+	blocking_behavior = SAMEWEAR
+
+/obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin
+	blocksound = SOFTUNDERHIT
+	body_parts_covered = COVERAGE_FULL
+	body_parts_inherent = COVERAGE_FULL
+
+/obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/fullbody
+	body_parts_covered = COVERAGE_FULL_BODY_ACTUAL
+	body_parts_inherent = COVERAGE_FULL_BODY_ACTUAL
+
+/obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/chestskin
+	blocksound = SOFTHIT //has to be different from the other skin's blocksound for them to layer.
+	body_parts_covered = COVERAGE_VEST
+	body_parts_inherent = COVERAGE_VEST
+
+
+//bailiff skin options (equal to a heavy gambeson + leather armor)
+/obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/bailiff
+	armor = ARMOR_PADDED
+	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER
+
+/obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/chestskin/bailiff
+	armor = ARMOR_LEATHER
+	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER
+
+
+//baseline wildsoul skin - 125% of a heavy gambeson + a leather armor over the chest.
+/obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/fullbody/wildsoul
+	name = "natural armour"
+	desc = "The natural body of this person protects them from some amount of harm."
+	armor_class = ARMOR_CLASS_NONE
+	armor = ARMOR_PADDED
+	max_integrity = ARMOR_INT_CHEST_LIGHT_ELITE //1.25x more than a heavy gambeson, because you dont get limb layering.
+
+/obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/chestskin/wildsoul
+	name = "natural chest armour"
+	desc = "The natural body of this person protects them from some amount of harm."
+	armor_class = ARMOR_CLASS_NONE
+	armor = ARMOR_LEATHER
+	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER //hardened leather armor, simple.
+
+//heavy wildsoul skin - a fullbody medium brigandine + a steel cuirass on the chest, very good but wont get limb layering.
+/obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/fullbody/wildsoul/heavy
+	name = "dense natural armour"
+	armor = ARMOR_BRIGANDINE
+	max_integrity = ARMOR_INT_CHEST_PLATE_BRIGANDINE //a full medium brigandine.
+
+/obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/chestskin/wildsoul/heavy
+	name = "dense natural chest armour"
+	armor = ARMOR_PLATE
+	max_integrity = ARMOR_INT_CHEST_MEDIUM_STEEL //A steel cuirass.
+
+//Warden wildsoul skin - a heavy gambeson (but leather type) + a steel cuirass on the chest. Can use bracers, headbands and the like.
+/obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/fullbody/wildsoul/heavy/tame
+	name = "warden's natural armour"
+	armor = ARMOR_LEATHER
+	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER //A heavy gambeson, but leather type.
+
