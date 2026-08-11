@@ -33,13 +33,13 @@
 	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER
 
 
-//baseline wildsoul skin - 150% of a leather armor, with a backup gambeson on chest.
+//baseline wildsoul skin - 125% of a leather armor, with a backup gambeson on chest.
 /obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/fullbody/wildsoul
 	name = "natural armour"
 	desc = "The natural body of this person protects them from some amount of harm."
 	armor_class = ARMOR_CLASS_NONE
 	armor = ARMOR_LEATHER
-	max_integrity = ARMOR_INT_CHEST_LIGHT_ANTAG //1.5x hardened leather armor.
+	max_integrity = ARMOR_INT_CHEST_LIGHT_ELITE //1.25x hardened leather armor.
 
 /obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/chestskin/wildsoul
 	name = "natural chest armour"
