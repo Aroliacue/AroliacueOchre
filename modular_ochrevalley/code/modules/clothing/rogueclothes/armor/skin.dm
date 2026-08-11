@@ -37,7 +37,7 @@
 /obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/fullbody/wildsoul
 	name = "natural armour"
 	desc = "The natural body of this person protects them from some amount of harm."
-	armor_class = ARMOR_CLASS_NONE
+	armor_class = ARMOR_CLASS_NONE //needs this due to being locked out of armor.
 	armor = ARMOR_LEATHER
 	max_integrity = ARMOR_INT_CHEST_LIGHT_ELITE //1.25x hardened leather armor.
 
@@ -64,11 +64,13 @@
 //Warden wildsoul skin - a heavy gambeson + light brigadine, simple since they get layering.
 /obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/fullbody/wildsoul/tame
 	name = "warden's natural armour"
+	armor_class = ARMOR_CLASS_LIGHT //can be set back since these can use armor.
 	armor = ARMOR_PADDED
 	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER //A heavy gambeson for the body.
 
 /obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/chestskin/wildsoul/tame
 	name = "warden's natural chest armour"
+	armor_class = ARMOR_CLASS_LIGHT
 	armor = ARMOR_BRIGANDINE
 	max_integrity = ARMOR_INT_CHEST_PLATE_BRIGANDINE - ARMOR_INT_CHEST_PLATE_BRIGANDINE_WEIGHT_MODIFIER //Light brig.
 
