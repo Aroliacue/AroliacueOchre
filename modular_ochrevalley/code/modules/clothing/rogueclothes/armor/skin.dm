@@ -21,10 +21,14 @@
 
 //bailiff skin options (equal to a heavy gambeson + leather armor)
 /obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/bailiff
+	name = "scar-marred skin"
+	desc = "Bearing scars of countless whips leaves a gnarly visage. Now it's your time to inflict the same fate upon others."
 	armor = ARMOR_PADDED
 	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER
 
 /obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/chestskin/bailiff
+	name = "scar-marred chest"
+	desc = "Bearing scars of countless whips leaves a gnarly visage. Now it's your time to inflict the same fate upon others."
 	armor = ARMOR_LEATHER
 	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER
 
@@ -39,13 +43,13 @@
 
 /obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/chestskin/wildsoul
 	name = "natural chest armour"
-	desc = "The natural body of this person protects them from some amount of harm."
+	desc = "The natural body of this person protects them from some amount of harm, particularly to the chest."
 	armor_class = ARMOR_CLASS_NONE
 	armor = ARMOR_PADDED
 	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER //a chest-only heavy gambeson.
 
 
-//heavy wildsoul skin - 150% of a steel cuirass, with a backup light brig on chest.
+//heavy wildsoul skin - 150% of a leather armor (but plate), with a backup light brig on chest.
 /obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/fullbody/wildsoul/heavy
 	name = "dense natural armour"
 	armor = ARMOR_PLATE
@@ -58,13 +62,13 @@
 
 
 //Warden wildsoul skin - a heavy gambeson + light brigadine, simple since they get layering.
-/obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/fullbody/wildsoul/heavy
-	name = "dense natural armour"
+/obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/fullbody/wildsoul/tame
+	name = "warden's natural armour"
 	armor = ARMOR_PADDED
 	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER //A heavy gambeson for the body.
 
-/obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/fullbody/wildsoul/heavy/tame
-	name = "warden's natural armour"
+/obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/chestskin/wildsoul/tame
+	name = "warden's natural chest armour"
 	armor = ARMOR_BRIGANDINE
 	max_integrity = ARMOR_INT_CHEST_PLATE_BRIGANDINE - ARMOR_INT_CHEST_PLATE_BRIGANDINE_WEIGHT_MODIFIER //Light brig.
 

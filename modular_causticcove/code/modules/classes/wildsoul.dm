@@ -82,7 +82,8 @@
 	gloves = /obj/item/clothing/gloves/roguetown/bandages/weighted
 	belt = /obj/item/storage/belt/rogue/leather/rope
 	beltl = /obj/item/rogueweapon/huntingknife/stoneknife
-	armor = /obj/item/clothing/suit/roguetown/armor/regenerating/skin/wildsoul/dense //OV EDIT
+	armor = /obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/fullbody/wildsoul/heavy //OV EDIT
+	shirt = /obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/chestskin/wildsoul/heavy //OV EDIT
 	give_feral_eyes(H)
 
 /datum/advclass/wildsoul/mantid
@@ -130,7 +131,8 @@
 	beltl = /obj/item/rogueweapon/huntingknife
 	beltr = /obj/item/quiver/arrows
 	backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
-	armor = /obj/item/clothing/suit/roguetown/armor/regenerating/skin/wildsoul	//OV EDIT
+	armor = /obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/fullbody/wildsoul //OV EDIT
+	shirt = /obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/chestskin/wildsoul //OV EDIT
 	give_feral_eyes(H)
 
 /datum/advclass/wildsoul/lampternfly //OV Edit AP Merge 4.5.26 - RE-ENABLED

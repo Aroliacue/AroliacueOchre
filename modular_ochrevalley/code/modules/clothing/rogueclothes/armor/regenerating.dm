@@ -24,3 +24,5 @@
 	armor_class = ARMOR_CLASS_NONE
 
 	max_integrity = 400
+
+///Unused file & armors since conversion to manual rest recovery / multiple layers.
