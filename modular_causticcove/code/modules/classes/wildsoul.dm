@@ -126,7 +126,7 @@
 	..()
 	H.adjust_blindness(-3)
 	head = /obj/item/clothing/head/roguetown/roguehood
-	suit = /obj/item/clothing/suit/roguetown/shirt/rags
+	l_hand = /obj/item/clothing/suit/roguetown/shirt/rags
 	belt = /obj/item/storage/belt/rogue/leather/rope
 	beltl = /obj/item/rogueweapon/huntingknife
 	beltr = /obj/item/quiver/arrows
@@ -228,7 +228,6 @@
 	..()
 	H.adjust_blindness(-3)
 	suit = /obj/item/clothing/suit/roguetown/shirt/rags
-	armor = /obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/fullbody/wildsoul/weak //OV EDIT, 60% of a light gambeson
 	shoes = /obj/item/clothing/shoes/roguetown/boots/furlinedboots
 	belt = /obj/item/storage/belt/rogue/leather
 	beltl = /obj/item/storage/belt/rogue/surgery_bag/improv // Crap tools for these guys.

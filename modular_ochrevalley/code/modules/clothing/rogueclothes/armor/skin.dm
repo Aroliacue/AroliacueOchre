@@ -73,9 +73,3 @@
 	armor_class = ARMOR_CLASS_LIGHT
 	armor = ARMOR_BRIGANDINE
 	max_integrity = ARMOR_INT_CHEST_PLATE_BRIGANDINE - ARMOR_INT_CHEST_PLATE_BRIGANDINE_WEIGHT_MODIFIER //Light brig.
-
-
-//Zad soul - Worse than a light gambeson, extremely token but so they dont have nothing at all.
-/obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/fullbody/wildsoul/weak
-	armor = ARMOR_PADDED_BAD //like a light gambeson
-	max_integrity = ARMOR_INT_CHEST_CIVILIAN //~60% of a light gambeson.
