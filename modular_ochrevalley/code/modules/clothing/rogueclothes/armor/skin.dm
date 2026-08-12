@@ -33,7 +33,7 @@
 	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER
 
 
-//baseline wildsoul skin - 125% of a leather armor, with a backup gambeson on chest.
+//baseline wildsoul skin (used by mantis) - 125% of a leather armor, with a backup gambeson on chest.
 /obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/fullbody/wildsoul
 	name = "natural armour"
 	desc = "The natural body of this person protects them from some amount of harm."
@@ -53,7 +53,7 @@
 /obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/fullbody/wildsoul/heavy
 	name = "dense natural armour"
 	armor = ARMOR_PLATE
-	max_integrity = ARMOR_INT_CHEST_LIGHT_ANTAG //1.5x hardened leather armor integ, but plate.
+	max_integrity = ARMOR_INT_CHEST_PLATE_IRON
 
 /obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/chestskin/wildsoul/heavy
 	name = "dense natural chest armour"
@@ -74,3 +74,8 @@
 	armor = ARMOR_BRIGANDINE
 	max_integrity = ARMOR_INT_CHEST_PLATE_BRIGANDINE - ARMOR_INT_CHEST_PLATE_BRIGANDINE_WEIGHT_MODIFIER //Light brig.
 
+
+//Zad soul - Worse than a light gambeson, extremely token but so they dont have nothing at all.
+/obj/item/clothing/suit/roguetown/armor/manual/resting/ochre/overskin/fullbody/wildsoul/weak
+	armor = ARMOR_PADDED_BAD //like a light gambeson
+	max_integrity = ARMOR_INT_CHEST_CIVILIAN //~60% of a light gambeson.
