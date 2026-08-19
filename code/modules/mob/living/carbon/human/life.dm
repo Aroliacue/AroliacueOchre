@@ -106,6 +106,13 @@
 		if(cf && !cf.ephemeral && mind)
 			cf.flaw_on_moved(src, OldLoc, Dir)
 //Caustic Edit End
+	// OV Edit Start - To prevent toggling scrying protections permanently
+	if(do_not_disturb) 
+		if(!isbelly(loc))
+			do_not_disturb = FALSE
+			to_chat(src, span_notice("You are no longer marked as private and can be scried.")) 
+	// OV Edit End
+
 
 /mob/living/carbon/human/DeadLife()
 	set invisibility = 0
@@ -202,7 +209,7 @@
 			mask_sound = pick('sound/items/confessormask1.ogg', 'sound/items/confessormask2.ogg', 'sound/items/confessormask3.ogg',
 							'sound/items/confessormask4.ogg', 'sound/items/confessormask5.ogg', 'sound/items/confessormask6.ogg',
 							'sound/items/confessormask7.ogg', 'sound/items/confessormask8.ogg', 'sound/items/confessormask9.ogg',
-					 		'sound/items/confessormask10.ogg')
+								'sound/items/confessormask10.ogg')
 			playsound(src, mask_sound, 90, FALSE, 4, 0)
 			return
 
