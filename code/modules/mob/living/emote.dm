@@ -55,7 +55,7 @@
 	var/mob/living/carbon/follower = user
 	var/datum/patron/patron = follower.patron
 
-	var/prayer = sanitize(input(follower, "All successfully sent prayers are heard by a higher power. Keep prayers SFW and in-character.", "Whisper your prayer", "Prayer") as text|null) // OV Edit: adds prayer rules
+	var/prayer = sanitize(input(follower, "All successfully sent prayers are heard by a higher power. Keep prayers SFW and in-character.", "Whisper your prayer") as text|null) // OV Edit: adds prayer rules
 	if(!prayer)
 		return
 
