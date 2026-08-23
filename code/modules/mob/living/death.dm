@@ -189,16 +189,13 @@ GLOBAL_LIST_EMPTY(last_words)
 	// this was a player that just died, so do the honors
 	// Vheslynites/second life people don't show up for this.
 	if (client)
-		//Caustic Edit Start - Only send whispers for deaths _not_ in a Player's Belly. NPC ones we do want to send.
+		//OV ADD START - Belly Death messages
 		if(istype(src.loc, /obj/belly))
 			var/mob/living/belly_owner = src.loc.loc //The loc of the belly is the one who has it in them.blockscharging
 			if(belly_owner && belly_owner.client) //Just verify that it cast properly and then check for a client present, then it was likely a death in a scene.
 				return
-		if(istype(src, /mob/living/simple_animal))
-			return
-		//Caustic Edit End
-		// Stop necrans from freaking out from digestion and unrevivable simplemob deaths
-		if (!gibbed) //OV Edit - Removed to streamline death whispers, cause AUGH reliability. Credit to Caustic Cove PR#422 commit 3f83add for tweak. //&& !( (src.mind && src.mind.has_antag_datum(/datum/antagonist/zombie)) || (src.mind && src.mind.has_antag_datum(/datum/antagonist/skeleton)) || HAS_TRAIT(src, TRAIT_SECONDLIFE) )) // because I hate being jumpscared by "OOH SOMEONE DIED IN THE CHURCH" when they're just killing a deadite with burn rot to rez them
+		//OV ADD END
+		if (!gibbed && !( (src.mind && src.mind.has_antag_datum(/datum/antagonist/zombie)) || (src.mind && src.mind.has_antag_datum(/datum/antagonist/skeleton)) || HAS_TRAIT(src, TRAIT_SECONDLIFE) || HAS_TRAIT(src, TRAIT_UNFORGIVABLE) )) // because I hate being jumpscared by "OOH SOMEONE DIED IN THE CHURCH" when they're just killing a deadite with burn rot to rez them
 			for (var/mob/living/player in GLOB.player_list)
 				if (player.stat == DEAD || isbrain(player))
 					continue
