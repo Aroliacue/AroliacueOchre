@@ -120,7 +120,7 @@
 			changeNext_move(CLICK_CD_MELEE)
 
 /mob/living/rmb_on(atom/A, params)
-	if(stat)
+	if(incapacitated(ignore_restraints = TRUE))
 		return
 
 	// OV Edit Start
