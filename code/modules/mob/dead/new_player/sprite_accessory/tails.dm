@@ -223,7 +223,7 @@
 /datum/sprite_accessory/tail/large_tails/small_shadekin
 	icon = 'modular_ochrevalley/icons/mob/tails/large_tails.dmi'
 	name = "Umbrakin, Short"
-	icon_state = "short_shadekin"
+	icon_state = "small_shadekin"
 	color_keys = 2
 	color_key_names = list("Tail", "Tailtip")
 
