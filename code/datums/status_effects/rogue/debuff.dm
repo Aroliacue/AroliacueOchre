@@ -1007,10 +1007,10 @@
 		for(var/obj/item/rogueweapon/huntingknife/idagger/harpy_talons/talons in harpy.held_items)
 			harpy.dropItemToGround(talons, TRUE)
 			return
-	var/mob/buckled_rider = buckled_mob.resolve()
+	/*var/mob/buckled_rider = buckled_mob.resolve() //OV EDIT - HARPY BUCKLE RUNTIME FIX
 	if(!isnull(buckled_rider))
 		buckled_rider.movement_type &= ~FLYING
-	buckled_mob = null
+	buckled_mob = null*/
 
 /atom/movable/screen/alert/status_effect/debuff/harpy_flight
 	name = "Flying..."
