@@ -996,7 +996,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 
 	carbon.Hear(composed, obj, lang, picked_message)
 	spawn(1)
-		target.playsound_local(get_turf(obj), 'sound/misc/talk.ogg', 100, FALSE, -1)
+		target.playsound_local(get_turf(obj), 'sound/misc/talk.ogg', 100, FALSE, pressure_affected = FALSE)
 
 	if(prob(20))
 		//OV EDIT START

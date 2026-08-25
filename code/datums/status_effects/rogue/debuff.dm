@@ -958,10 +958,10 @@
 	ADD_TRAIT(harpy, TRAIT_SPELLCOCKBLOCK, ORGAN_TRAIT)
 	harpy.flying = TRUE
 	init_signals()
-	var/mob/buckled_rider = harpy.buckled_mobs[1]
+	/*var/mob/buckled_rider = harpy.buckled_mobs[1] //OV EDIT - HARPY BUCKLE REMOVAL TEST
 	if(!isnull(buckled_rider))
 		buckled_mob = WEAKREF(buckled_rider)
-		buckled_rider.movement_type |= FLYING
+		buckled_rider.movement_type |= FLYING*/
 
 /datum/status_effect/debuff/harpy_flight/tick()
 	. = ..()
