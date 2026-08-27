@@ -67,8 +67,16 @@
 		return
 	follower.sate_addiction(/datum/charflaw/addiction/godfearing)
 
+	var/devout = FALSE
+	if(ishuman(follower))
+		var/mob/living/carbon/human/hfollower = follower
+		for(var/datum/charflaw/cf in hfollower.charflaws)
+			if(istype(cf, /datum/charflaw/addiction/godfearing))
+				devout = TRUE
+				break
+
 	/* admin stuff - tells you the followers name, key, and what patron they follow */
-	var/follower_ident = "[follower.key]/([follower.real_name]) (follower of [patron])"
+	var/follower_ident = "[follower.key]/([follower.real_name]) ([devout ? "devout " : ""]follower of [patron])"
 	message_admins("[follower_ident] [ADMIN_SM(follower)] [ADMIN_FLW(follower)] [ADMIN_PLAYEREFFECTS(follower)] prays: [span_info(prayer)]")
 	user.log_message("(follower of [patron]) prays: [prayer]", LOG_GAME)
 	// OV Edit Start - Send a special prayer notification sound to staff
@@ -878,6 +886,7 @@
 /datum/emote/living/scream/painscream/run_emote(mob/user, params, type_override, intentional)
 	. = ..()
 	if(.)
+		user.shoutbubble()
 		for(var/mob/living/carbon/human/L in viewers(7,user))
 			if(L == user)
 				L.sate_addiction(/datum/charflaw/addiction/masochist)
@@ -904,6 +913,7 @@
 /datum/emote/living/scream/agony/run_emote(mob/user, params, type_override, intentional)
 	. = ..()
 	if(.)
+		user.shoutbubble()
 		for(var/mob/living/carbon/human/L in viewers(7,user))
 			if(L == user)
 				L.sate_addiction(/datum/charflaw/addiction/masochist)
@@ -919,9 +929,10 @@
 	show_runechat = FALSE
 	needs_emotion = TRUE
 
-/datum/emote/living/scream/superagony/run_emote(mob/user, params, type_override, intentional)
+/datum/emote/living/scream/superagony/run_emote(mob/user, pfarams, type_override, intentional)
 	. = ..()
 	if(.)
+		user.shoutbubble()
 		for(var/mob/living/carbon/human/L in viewers(7,user))
 			if(L == user)
 				L.sate_addiction(/datum/charflaw/addiction/masochist)
@@ -940,6 +951,7 @@
 /datum/emote/living/scream/firescream/run_emote(mob/user, params, type_override, intentional)
 	. = ..()
 	if(.)
+		user.shoutbubble()
 		for(var/mob/living/carbon/human/L in viewers(7,user))
 			if(L == user)
 				L.sate_addiction(/datum/charflaw/addiction/masochist)
@@ -1067,11 +1079,6 @@
 	set category = "Emotes.Noises"
 
 	emote("rage", intentional = TRUE)
-
-/datum/emote/living/rage/run_emote(mob/user, params, type_override, intentional, targetted)
-	. = ..()
-	if(. && user.mind)
-		record_round_statistic(STATS_WARCRIES)
 
 /datum/emote/living/attnwhistle
 	key = "attnwhistle"
@@ -1338,6 +1345,13 @@
 	set category = "Emotes.Noises"
 
 	emote("warcry", intentional = TRUE)
+
+/datum/emote/living/warcry/run_emote(mob/user, params, type_override, intentional, targetted)
+	. = ..()
+	if(.)
+		user.shoutbubble()
+		if(user.mind)
+			record_round_statistic(STATS_WARCRIES)
 
 /datum/emote/living/wave
 	key = "wave"

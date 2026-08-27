@@ -64,7 +64,7 @@
 /datum/emote/proc/adjacentaction(mob/user, mob/target)
 	return
 
-/datum/emote/proc/run_emote(mob/user, params, type_override, intentional = FALSE, targetted = FALSE, animal = FALSE)
+/datum/emote/proc/run_emote(mob/user, params, type_override, intentional = FALSE, targetted = FALSE, animal = FALSE, quiet = FALSE)
 	. = TRUE
 	if(!can_run_emote(user, TRUE, intentional))
 		return FALSE
@@ -145,6 +145,10 @@
 				emotelocation = dullahan.my_head
 			else// if(!vision.viewing_head)
 				emotelocation = user
+		var/sound_range = snd_range
+		if(quiet)
+			sound_range = -6
+
 		//OV Add Start
 		if(message_origin != user)
 			emotelocation = message_origin
@@ -152,9 +156,9 @@
 
 		//OV edit
 		if(key == "burp" || key == "belch")
-			playsound(emotelocation, tmp_sound, snd_vol, FALSE, snd_range, soundping = soundping, animal_pref = animal, quiet = is_quiet, pref_toggle = "belch_noises")
+			playsound(emotelocation, tmp_sound, snd_vol, FALSE, sound_range, soundping = soundping, animal_pref = animal, quiet = is_quiet, pref_toggle = "belch_noises")
 		else
-			playsound(emotelocation, tmp_sound, snd_vol, FALSE, snd_range, soundping = soundping, animal_pref = animal, quiet = is_quiet)
+			playsound(emotelocation, tmp_sound, snd_vol, FALSE, sound_range, soundping = soundping, animal_pref = animal, quiet = is_quiet)
 		//OV edit end
 	if(!nomsg)
 		if(user.key)
@@ -195,9 +199,9 @@
 		if(show_runechat)
 			runechat_msg_to_use = runechat_msg ? runechat_msg : pre_color_msg
 		if(emote_type == EMOTE_AUDIBLE)
-			emotelocation.audible_message(msg, runechat_message = runechat_msg_to_use, log_seen = SEEN_LOG_EMOTE)
+			emotelocation.audible_message(msg, runechat_message = runechat_msg_to_use, log_seen = SEEN_LOG_EMOTE, hearing_distance = (quiet ? 1 : DEFAULT_MESSAGE_RANGE))
 		else
-			emotelocation.visible_message(msg, runechat_message = runechat_msg_to_use, log_seen = SEEN_LOG_EMOTE)
+			emotelocation.visible_message(msg, runechat_message = runechat_msg_to_use, log_seen = SEEN_LOG_EMOTE, vision_distance = (quiet ? 1 : DEFAULT_MESSAGE_RANGE))
 
 /mob/living/proc/get_emote_pitch()
 	return clamp(voice_pitch, 0.5, 2)
