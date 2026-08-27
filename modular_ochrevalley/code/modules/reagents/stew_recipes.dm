@@ -6,79 +6,79 @@
 	crafting_time = STEW_COOKING_TIME
 
 /datum/container_craft/cooking/minttea
-    name = "Mint Tea"
+	name = "Mint Tea"
 	wildcard_requirements = list(/obj/item/alch/mentha)
 	created_reagent = /datum/reagent/water/bufftea/minttea
 	crafting_time = STEW_COOKING_TIME
 
 /datum/container_craft/cooking/wormwoodtea
-    name = "Wormwood Tea"
+	name = "Wormwood Tea"
 	wildcard_requirements = list(/obj/item/alch/artemisia)
 	created_reagent = /datum/reagent/water/wormwoodtea
 	crafting_time = STEW_COOKING_TIME
 
 /datum/container_craft/cooking/sagetea
-    name = "Sage Tea"
+	name = "Sage Tea"
 	wildcard_requirements = list(/obj/item/alch/salvia)
 	created_reagent = /datum/reagent/water/sagetea
 	crafting_time = STEW_COOKING_TIME
 
 /datum/container_craft/cooking/valeriantea
-    name = "Valerian Tea"
+	name = "Valerian Tea"
 	wildcard_requirements = list(/obj/item/alch/valeriana)
 	created_reagent = /datum/reagent/water/valeriantea
 	crafting_time = STEW_COOKING_TIME
 
 /datum/container_craft/cooking/baothatea
-    name = "Baothan Tea"
+	name = "Baothan Tea"
 	wildcard_requirements = list(/obj/item/alch/atropa)
 	created_reagent = /datum/reagent/water/baothatea
 	crafting_time = STEW_COOKING_TIME
 
 /datum/container_craft/cooking/eyebrighttea
-    name = "Euphrasia Tea"
+	name = "Euphrasia Tea"
 	wildcard_requirements = list(/obj/item/alch/euphrasia)
 	created_reagent = /datum/reagent/water/bufftea/eyebrighttea
 	crafting_time = STEW_COOKING_TIME
 
 /datum/container_craft/cooking/bloomtea
-    name = "Bloom Tea"
+	name = "Bloom Tea"
 	wildcard_requirements = list(/obj/item/alch/manabloompowder)
 	created_reagent = /datum/reagent/consumable/caffeine/bloomtea
 	crafting_time = STEW_COOKING_TIME
 
 /datum/container_craft/cooking/eorantea
-    name = "Eoran Tea"
+	name = "Eoran Tea"
 	wildcard_requirements = list(/obj/item/alch/calendula)
 	created_reagent = /datum/reagent/water/eorantea
 	crafting_time = STEW_COOKING_TIME
 
 /datum/container_craft/cooking/ashtea
-    name = "Ashtray Tea"
+	name = "Ashtray Tea"
 	wildcard_requirements = list(/obj/item/reagent_containers/food/snacks/grown/rogue/pipeweeddry)
 	created_reagent = /datum/reagent/water/ashtea
 	crafting_time = STEW_COOKING_TIME
 
 /datum/container_craft/cooking/psytea
-    name = "Pilgrim Tea"
+	name = "Pilgrim Tea"
 	wildcard_requirements = list(/obj/item/alch/benedictus)
 	created_reagent = /datum/reagent/water/bufftea/psytea
 	crafting_time = STEW_COOKING_TIME
 
 /datum/container_craft/cooking/dandelioncoffee
-    name = "Dandelion Coffee"
+	name = "Dandelion Coffee"
 	wildcard_requirements = list(/obj/item/alch/taraxacum)
 	created_reagent = /datum/reagent/water/bufftea/dandelioncoffee
 	crafting_time = STEW_COOKING_TIME
 
 /datum/container_craft/cooking/nettletea
-    name = "Nettle Tea"
+	name = "Nettle Tea"
 	wildcard_requirements = list(/obj/item/alch/urtica)
 	created_reagent = /datum/reagent/water/nettletea
 	crafting_time = STEW_COOKING_TIME
 
 /datum/container_craft/cooking/chamomiletea
-    name = "Chamomile Tea"
+	name = "Chamomile Tea"
 	wildcard_requirements = list(/obj/item/alch/matricaria)
 	created_reagent = /datum/reagent/water/chamomiletea
 	crafting_time = STEW_COOKING_TIME
