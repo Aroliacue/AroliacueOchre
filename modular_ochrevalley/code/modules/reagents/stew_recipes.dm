@@ -1,10 +1,4 @@
 #define STEW_COOKING_TIME 30 SECONDS
-/datum/container_craft/cooking/bogtea
-	name = "Bog Tea"
-	wildcard_requirements = list(/obj/item/reagent_containers/food/snacks/grown/rogue/swampweeddry = 1)
-	created_reagent = /datum/reagent/water/bogtea
-	crafting_time = STEW_COOKING_TIME
-
 /datum/container_craft/cooking/minttea
 	name = "Mint Tea"
 	wildcard_requirements = list(/obj/item/alch/mentha = 1)
@@ -51,12 +45,6 @@
 	name = "Eoran Tea"
 	wildcard_requirements = list(/obj/item/alch/calendula = 1)
 	created_reagent = /datum/reagent/water/eorantea
-	crafting_time = STEW_COOKING_TIME
-
-/datum/container_craft/cooking/ashtea
-	name = "Ashtray Tea"
-	wildcard_requirements = list(/obj/item/reagent_containers/food/snacks/grown/rogue/pipeweeddry = 1)
-	created_reagent = /datum/reagent/water/ashtea
 	crafting_time = STEW_COOKING_TIME
 
 /datum/container_craft/cooking/psytea
