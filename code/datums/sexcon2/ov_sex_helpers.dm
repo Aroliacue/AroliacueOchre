@@ -41,6 +41,7 @@
 
 	return TRUE
 
+/* Redundant due to open_erp()
 /mob/living/carbon/human/verb/masturbate()
 	set name = "Masturbate"
 	set category = "IC"
@@ -50,6 +51,7 @@
 		return
 
 	try_initiate_sex(src)
+*/
 
 //OPEN ERP panel with a verb, allowing it to work on prey in bellies
 
