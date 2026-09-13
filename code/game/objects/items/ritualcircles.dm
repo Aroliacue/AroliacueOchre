@@ -422,12 +422,12 @@
 /obj/structure/ritualcircle/dendor/proc/lesservolf(mob/living/carbon/human/target) // IS proc
 	target.apply_status_effect(/datum/status_effect/buff/lesserwolf) // applies status effect
 
-//OV EDIT START
+//OV ADD START
 /obj/structure/ritualcircle/malum
 	name = "Rune of Forge"
 	desc = "A holy rune of <font color='ff9933'>Malum.</font> </br> <i>A hammer and heat, to fix any imperfections with.</i>"
 	icon_state = "malum_chalky"
-	var/forgerites = list("Ritual of Blessed Reforgance")
+	var/forgerites = list("Bestow Blessing", "Ritual of Blessed Reforgance")
 
 /obj/structure/ritualcircle/malum/attack_hand(mob/living/user)
 	if(!..())
@@ -443,6 +443,22 @@
 		return
 	var/riteselection = input(user, "Rituals of Creation", src) as null|anything in forgerites
 	switch(riteselection)
+		if("Bestow Blessing")
+			if(!do_after(user, 5 SECONDS))
+				return
+			user.say("Aid my craft, oh Forgefather!!")
+			if(!do_after(user, 5 SECONDS))
+				return
+			user.say("Guide my hand unto creation!!")
+			if(!do_after(user, 5 SECONDS))
+				return
+			user.say("Let it be molded within your name!!")
+			icon_state = "malum_active"
+			malumblessing(src)
+			playsound(user, 'sound/magic/magearmorup.ogg', 60, FALSE, -1)
+			user.apply_status_effect(/datum/status_effect/debuff/ritesexpended)
+			spawn(120)
+				icon_state = "malum_chalky"
 		if("Ritual of Blessed Reforgance")
 			if(!do_after(user, 5 SECONDS))
 				return
@@ -465,6 +481,12 @@
 			spawn(120)
 				icon_state = "malum_chalky"
 
+/obj/structure/ritualcircle/malum/proc/malumblessing(src)
+	var/ritualtargets = view(4, loc)
+	for(var/mob/living/carbon/human/target in ritualtargets)
+		target.apply_status_effect(/datum/status_effect/buff/malumritual)
+		to_chat(target,span_cultsmall("Malum's persistance guides me forward!"))
+
 /obj/structure/ritualcircle/malum/proc/holyreforge(src)
 	var/ritualtargets = view(7, loc)
 	for(var/mob/living/carbon/human/target in ritualtargets)
@@ -475,7 +497,7 @@
 	for (var/obj/item/ingot/steel/I in loc)
 		qdel(I)
 		new /obj/item/ingot/steelholy(loc)
-//OV EDIT END
+//OV ADD END
 
 /obj/structure/ritualcircle/abyssor
 	name = "Rune of Storms"
